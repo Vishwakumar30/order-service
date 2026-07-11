@@ -92,25 +92,6 @@ def delete_order(id):
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5001)
-
-
-3.Dockerfile 
-
-FROM python:3.12-slim
-
-WORKDIR /app
-
-COPY requirements.txt .
-
-RUN pip install --no-cache-dir -r requirements.txt
-
-COPY . .
-
-EXPOSE 5001
-
-CMD ["python", "app.py"]
-
-
 4. .gitignore
 
 __pycache__/
